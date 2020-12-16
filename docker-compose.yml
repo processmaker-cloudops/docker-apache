@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
    mysql:
-     image: mysql:5.6
+     image: mysql:5.7
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: PM-DBPassw0rd
@@ -16,6 +16,8 @@ services:
      ports:
        - "80:80"
      restart: always
+     environment:
+       URL: "127.0.0.1"
      networks:
       - pm-net
 
